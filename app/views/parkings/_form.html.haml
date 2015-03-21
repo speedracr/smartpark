@@ -1,0 +1,6 @@
+= simple_form_for(@parking, html: { class: 'form-horizontal'}) do |f|
+  = f.input :parkdeck_id, label: "Park deck ID", input_html: { class: "form-control" }
+  = f.input :starttime, input_html: { value: "#{@time}" }, as: :hidden
+  = f.input :endtime, as: :hidden
+  %br/
+  = f.button :submit
