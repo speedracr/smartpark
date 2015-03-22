@@ -1,0 +1,14 @@
+.col-md-12
+  %h1 All parkdecks
+  = link_to "New parkdeck", new_parkdeck_path, class: "btn btn-default"
+
+.col-md-6.col-sm-12
+  - @parkdecks.each do |parkdeck|
+    .parkdeck
+      %h5 
+      = parkdeck.name
+      %br/
+      = parkdeck.city
+      %br/
+      Price per 15min:
+      = parkdeck.pricep15

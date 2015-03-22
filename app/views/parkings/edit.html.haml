@@ -1,0 +1,9 @@
+%h3
+  Parking from
+  = @parking.start.to_s(:short)
+  - if @parking.end
+    until
+    = @parking.end
+  %br/
+
+  = render 'form'

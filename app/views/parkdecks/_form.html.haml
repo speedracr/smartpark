@@ -1,0 +1,8 @@
+= simple_form_for(@parkdeck, html: { class: 'form-horizontal'}) do |f|
+  = f.input :name, label: "Name", input_html: { class: "form-control" }
+  = f.input :city, label: "City", input_html: { class: "form-control" }
+  = f.input :lat, label: "Latitude", input_html: { class: "form-control" }
+  = f.input :lng, label: "Longitude", input_html: { class: "form-control" } 
+  = f.input :pricep15, label: "Price per 15min", input_html: { class: "form-control" }
+  %br/
+  = f.button :submit

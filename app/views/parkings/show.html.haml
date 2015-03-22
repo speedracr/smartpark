@@ -1,0 +1,13 @@
+%h3
+  Parking from
+  = @parking.start.to_s(:short)
+  - if @parking.end
+    until
+    = @parking.end.to_s(:short)
+  %br/
+
+  - if @parking.end.present?
+    Amount: EUR
+    = @parking.amount.to_f
+  - else
+    = link_to "Pay and check out", checkout_parking_path
