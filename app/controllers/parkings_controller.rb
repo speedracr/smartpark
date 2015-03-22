@@ -8,6 +8,7 @@ class ParkingsController < ApplicationController
 
   def new
     @starttime = Time.now
+    @car = current_user.cars.last
     @parking = Parking.new
   end
 

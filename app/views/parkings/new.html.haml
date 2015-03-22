@@ -1,8 +1,13 @@
+:javascript
+  start_map();
+
+#map-canvas
+  
 .col-md-12
   %h1 Park you car
   %h2 
-    Now it's
-    = @time
+    Check-in time: 
+    = @starttime.to_s(:short)
   
   .col-lg-3.col-sm-12
     = render 'form'

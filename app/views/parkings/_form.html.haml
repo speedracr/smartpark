@@ -1,9 +1,10 @@
 = simple_form_for(@parking, html: { class: 'form-horizontal'}) do |f|
   = f.association :parkdeck, input_html: { class: "form-control" }
   = f.input :start, input_html: { value: "#{@starttime}" }
+  = f.input :car_id, input_html: { value: "#{@car.id}" }
   - if @endtime.present?
     = f.input :end
-  = f.input :lat, label: "Latitude"
+  = f.input :lat, label: "Latitude", as: :hidden
   = f.input :lng, label: "Longitude"
   %br/
   = f.button :submit
